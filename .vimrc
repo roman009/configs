@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -31,6 +30,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plugin 'itchyny/lightline.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,3 +52,17 @@ syn on
 let g:NERDTreeNodeDelimiter = "\u00a0"
 set laststatus=2
 
+" Some basics:
+    set nocompatible
+    filetype plugin on
+    syntax on
+    set encoding=utf-8
+    set bg=dark
+    set backspace=indent,eol,start
+    set noswapfile
+    set visualbell
+
+" Enable autocompletion:
+    set wildmode=longest,list,full
+" Disables automatic commenting on newline:
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
