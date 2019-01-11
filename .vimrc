@@ -61,6 +61,7 @@ set laststatus=2
     set backspace=indent,eol,start
     set noswapfile
     set visualbell
+    set showcmd
 
 " Enable autocompletion:
     set wildmode=longest,list,full
